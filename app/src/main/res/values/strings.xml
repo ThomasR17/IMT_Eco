@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">IMT Eco</string>
+    <string name="title_home">Home</string>
+    <string name="title_addatrip">Add a trip</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_compare">Compare</string>
+    <string name="title_account">Account</string>
+    <string name="distance">Distance</string>
+    <string name="km">km</string>
+    <string name="mail">Mail</string>
+    <string name="car">Car</string>
+    <string name="time">Time</string>
+    <string name="seconds">seconds</string>
+    <string name="train">train</string>
+    <string name="avion">avion</string>
+    <string name="visio">visio</string>
+    <string name="ok">OK</string>
+</resources>
