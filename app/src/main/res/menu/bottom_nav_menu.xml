@@ -3,22 +3,22 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_home"
-        android:icon="@drawable/ic_home_black_24dp"
-        android:title="@string/title_home" />
+        android:id="@+id/navigation_add"
+        android:icon="@drawable/nav_add"
+        android:title="@string/title_addanactivity" />
 
     <item
         android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:icon="@drawable/nav_dashboard"
         android:title="@string/title_dashboard" />
 
     <item
         android:id="@+id/navigation_compare"
-        android:icon="@drawable/ic_compare_black_50dp"
+        android:icon="@drawable/nav_compare"
         android:title="@string/title_compare" />
     <item
         android:id="@+id/navigation_account"
-        android:icon="@drawable/ic_compare_black_50dp"
-        android:title="Account" />
+        android:icon="@drawable/nav_acc"
+        android:title="@string/title_account" />
 
 </menu>

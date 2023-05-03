@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:background="@color/title"
         android:padding="20dp"
-        android:text="@string/create_an_account"
+        android:text="@string/login"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="24sp"
@@ -23,7 +23,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        tools:ignore="TextContrastCheck" />
+        tools:ignore="TextContrastCheck,VisualLintBounds" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -34,14 +34,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_login">
+        app:layout_constraintTop_toBottomOf="@+id/title_login"
+        tools:ignore="VisualLintBounds">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="197dp"
             android:layout_marginHorizontal="5dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginVertical="20dp"
             android:layout_marginBottom="5dp"
             android:background="@drawable/rounded_logo"
             android:contentDescription="@string/logo"
@@ -49,40 +50,10 @@
             tools:ignore="ImageContrastCheck" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_signup"
-            android:backgroundTint="#3BC0CC"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:paddingHorizontal="20dp"
-            android:paddingVertical="10dp">
-
-            <TextView
-                android:id="@+id/title_1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/sign_up"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                tools:ignore="TextContrastCheck" />
-
-            <TextView
-                android:id="@+id/title_2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/it_s_quick_and_easy"
-                android:textColor="#424242"
-                android:textSize="16sp" />
-        </LinearLayout>
-
-        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginVertical="20dp"
             android:background="@drawable/rounded_background"
             android:orientation="vertical"
             android:padding="20dp">
@@ -92,32 +63,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:height="48dp"
+                android:autofillHints=""
                 android:ems="10"
-                android:hint="Username*"
+                android:hint="@string/username_input"
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
-                android:textColorHint="#263238"
-                android:autofillHints="" />
+                android:textColorHint="#263238" />
 
             <EditText
                 android:id="@+id/input_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:autofillHints=""
                 android:ems="10"
-                android:hint="New password*"
+                android:hint="@string/password"
                 android:inputType="textPassword"
                 android:minHeight="48dp"
                 android:textColorHint="#263238" />
 
-            <EditText
-                android:id="@+id/input_confirm_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Confirm your password*"
-                android:inputType="textPassword"
-                android:minHeight="48dp"
-                android:textColorHint="#263238" />
         </LinearLayout>
 
         <Button
@@ -126,8 +89,9 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:backgroundTint="@color/button"
-            android:text="@string/sign_in"
-            android:textColor="#311B92" />
+            android:text="@string/login"
+            android:textColor="#311B92"
+            tools:ignore="DuplicateSpeakableTextCheck,VisualLintButtonSize" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

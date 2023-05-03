@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">IMT Eco</string>
     <string name="title_home">Home</string>
-    <string name="title_addatrip">Add a trip</string>
+    <string name="title_addanactivity">Add an activity</string>
+    <string name="title_resetpassword">Reset password</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_compare">Compare</string>
     <string name="title_account">Account</string>
@@ -14,5 +15,28 @@
     <string name="train">train</string>
     <string name="avion">avion</string>
     <string name="visio">visio</string>
+    <string name="output">...</string>
     <string name="ok">OK</string>
+    <string name="kgCO2">kg CO2</string>
+    <string name="resetpassword_img">resetpassword_img</string>
+    <string name="enter_your_username">Enter your username</string>
+    <string name="username">Username</string>
+    <string name="enter_your_new_password">Enter your new password</string>
+    <string name="new_password">New password</string>
+    <string name="confirm_password">Confirm password*</string>
+    <string name="answer_your_secret_question">Answer your secret question</string>
+    <string name="what_is_your_dad_s_birthday">What is your dad\'s birthday ?</string>
+    <string name="your_answer">Your answer</string>
+    <string name="submit">submit</string>
+    <string name="login">Login</string>
+    <string name="logo">Logo</string>
+    <string name="username_input">Username*</string>
+    <string name="password">Password*</string>
+    <string name="sign_in">Sign in</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="sign_up">Sign up</string>
+    <string name="it_s_quick_and_easy">It’s quick and easy.</string>
+    <color name="bg">#2196F3</color>
+    <color name="title">#7bbc2d</color>
+    <color name="button">#FFFF7448</color>
 </resources>

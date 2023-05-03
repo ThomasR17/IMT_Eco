@@ -4,37 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.dashboard.DashboardFragment">
+    tools:context=".ui.dashboard.DashboardFragment"
+    android:background="#2196F3">
 
     <TextView
         android:id="@+id/title_dashboard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#4CAF50"
+        android:background="#7bbc2d"
         android:padding="20dp"
         android:text="@string/title_dashboard"
         android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/dashboard_vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
 
     <LinearLayout
         android:id="@+id/dashboard_vertical"
         android:layout_width="409dp"
         android:layout_height="662dp"
+        android:gravity="center_horizontal"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/title_dashboard"
-        tools:layout_editor_absoluteX="1dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_dashboard">
 
         <LinearLayout
-            android:id="@+id/total"
+            android:id="@+id/totalCO2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#009688"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/rounded_bg_turquoisefonce"
             android:gravity="center"
             android:orientation="horizontal"
             android:padding="10dp">
@@ -43,220 +51,312 @@
                 android:id="@+id/total"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Total :" />
+                android:text="Total :"
+                android:textColor="@color/white" />
 
             <TextView
                 android:id="@+id/sommeCO2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="50dp"
-                android:text="Total CO2"
-                android:textSize="20sp" />
+                android:text="@string/output"
+                android:textColor="@color/white"
+                android:textColorHint="#FF0707"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="kg CO2" />
+                android:text="kg CO2"
+                android:textColor="@color/white" />
         </LinearLayout>
 
         <TextView
             android:id="@+id/title_transports"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_bg_fonce"
             android:gravity="center"
             android:text="Transports"
+            android:textColor="@color/white"
             android:textSize="25sp" />
 
         <LinearLayout
-            android:id="@+id/transports_voiture"
-            android:layout_width="match_parent"
+            android:id="@+id/dashboard_voiture"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_background"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
 
-            <TextView
-                android:id="@+id/textView10"
+            <ImageView
+                android:id="@+id/dashboard_voiture_img"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Voiture :" />
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_icon"
+                android:padding="10dp"
+                app:srcCompat="@drawable/icons8_voiture_50" />
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/dashboard_voiture_output1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="VoitureKm" />
+                android:layout_marginHorizontal="20dp"
+                android:text="@string/output"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textView12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="km soit : " />
+                android:text="km soit : "
+                android:textColor="@android:color/secondary_text_light" />
 
             <TextView
-                android:id="@+id/textView13"
+                android:id="@+id/dashboard_voiture_output2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="VoitureCO2" />
+                android:layout_marginHorizontal="20dp"
+                android:text="@string/output"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textView14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="kg CO2" />
+                android:layout_marginRight="10dp"
+                android:text="@string/kgCO2"
+                android:textColor="@android:color/secondary_text_light" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/transports_train"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/rounded_background"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/dashboard_train_img"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_icon"
+                android:padding="10dp"
+                android:src="@drawable/icon_avion"
+                app:srcCompat="@drawable/icon_train" />
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/dashboard_train_output1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Voiture :" />
+                android:layout_marginHorizontal="20dp"
+                android:text="@string/output"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                tools:ignore="DuplicateIds" />
 
             <TextView
-                android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="VoitureKm" />
+                android:text="km soit : "
+                android:textColor="@android:color/secondary_text_light" />
 
             <TextView
-                android:id="@+id/textView12"
+                android:id="@+id/dashboard_train_output2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="km soit : " />
+                android:layout_marginHorizontal="20dp"
+                android:text="@string/output"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textView13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="VoitureCO2" />
-
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="kg CO2" />
+                android:layout_marginRight="10dp"
+                android:text="@string/kgCO2"
+                android:textColor="@android:color/secondary_text_light" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/transports_avion"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:background="@drawable/rounded_background"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/dashboard_avion_img"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_icon"
+                android:padding="10dp"
+                android:src="@drawable/icon_avion" />
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/dashboard_avion_output1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Voiture :" />
+                android:layout_marginHorizontal="20dp"
+                android:text="@string/output"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="VoitureKm" />
+                android:text="km soit : "
+                android:textColor="@android:color/secondary_text_light" />
 
             <TextView
-                android:id="@+id/textView12"
+                android:id="@+id/dashboard_avion_output2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="km soit : " />
+                android:layout_marginHorizontal="20dp"
+                android:text="@string/output"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textView13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="VoitureCO2" />
+                android:layout_marginRight="10dp"
+                android:text="@string/kgCO2"
+                android:textColor="@android:color/secondary_text_light" />
 
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="kg CO2" />
         </LinearLayout>
 
         <TextView
             android:id="@+id/title_communications"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_bg_fonce"
             android:gravity="center"
             android:text="Communications"
+            android:textColor="@color/white"
             android:textSize="25sp" />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:id="@+id/com_mail"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_background"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/dashboard_mail_img"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_icon"
+                android:padding="10dp"
+                android:src="@drawable/icon_avion"
+                app:srcCompat="@drawable/icon_email" />
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/dashboard_mail_output1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Voiture :" />
+                android:layout_marginHorizontal="20dp"
+                android:text="@string/output"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="VoitureKm" />
+                android:text="mails soit : "
+                android:textColor="@android:color/secondary_text_light" />
 
             <TextView
-                android:id="@+id/textView12"
+                android:id="@+id/dashboard_mail_output2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="km soit : " />
+                android:layout_marginHorizontal="20dp"
+                android:text="@string/output"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textView13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="VoitureCO2" />
+                android:layout_marginRight="10dp"
+                android:text="@string/kgCO2"
+                android:textColor="@android:color/secondary_text_light" />
 
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="kg CO2" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:id="@+id/com_visio"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/rounded_background"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/dashboard_visio_img"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_icon"
+                android:padding="10dp"
+                android:src="@drawable/icon_avion"
+                app:srcCompat="@drawable/icon_visio" />
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/dashboard_visio_output1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Voiture :" />
+                android:layout_marginHorizontal="20dp"
+                android:text="@string/output"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="VoitureKm" />
+                android:text="min soit : "
+                android:textColor="@android:color/secondary_text_light" />
 
             <TextView
-                android:id="@+id/textView12"
+                android:id="@+id/dashboard_visio_output2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="km soit : " />
+                android:layout_marginHorizontal="20dp"
+                android:text="@string/output"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textView13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="VoitureCO2" />
+                android:layout_marginRight="10dp"
+                android:text="@string/kgCO2"
+                android:textColor="@android:color/secondary_text_light" />
 
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="kg CO2" />
         </LinearLayout>
 
     </LinearLayout>
